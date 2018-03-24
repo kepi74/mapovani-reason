@@ -1,10 +1,21 @@
 {
   "name": "mapovani-motyly",
   "version": "0.1.0",
-  "sources": {
-    "dir" : "src",
-    "subdirs" : true
-  },
+  "sources": [
+    {
+      "dir" : "src",
+      "subdirs" : true
+    },
+    {
+      "dir": "backend/src",
+      "subdirs": true
+    },
+    {
+      "dir": "backend/__tests__",
+      "subdirs": true,
+      "type": "dev"
+    }
+  ],
   "suffix": ".bs.js",
   "bs-dependencies": [],
   "bs-dev-dependencies": [
