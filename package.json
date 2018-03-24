@@ -3,8 +3,12 @@
   "version": "0.1.0",
   "scripts": {
     "build": "bsb -make-world",
+    "clean": "bsb -clean-world",
+    "coverage": "nyc report --temp-directory=coverage --reporter=text-lcov | coveralls",
     "start": "bsb -make-world -w",
-    "clean": "bsb -clean-world"
+    "test": "yarn build && jest --coverage && yarn coverage",
+    "watch:bsb": "bsb -make-world -w",
+    "watch:jest": "jest --coverage --watchAll"
   },
   "keywords": [
     "BuckleScript"
@@ -12,6 +16,9 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "bs-platform": "^2.2.3"
+    "@glennsl/bs-jest": "^0.4.2",
+    "bs-platform": "^2.2.3",
+    "coveralls": "^3.0.0",
+    "nyc": "^11.6.0"
   }
 }
