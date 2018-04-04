@@ -16,3 +16,12 @@ npm run start
 
 # Editor
 If you use `vscode`, Press `Windows + Shift + B` it will build automatically
+
+# Starting graphQL server
+1. `node app.js`
+2.  make a post request
+
+    Example:
+    `http://localhost:3000/`
+
+    `{"query":"query PostsForAuthor {\n  author(id: 3) {\n    firstName\n    posts {\n      title\n      votes\n    }\n  }\n}\n","variables":null,"operationName":"PostsForAuthor"}`
