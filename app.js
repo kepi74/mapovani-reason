@@ -3,7 +3,7 @@ const bodyParser = require("body-parser");
 const { graphqlExpress, graphiqlExpress } = require("apollo-server-express");
 
 // import schema from generated bucklescript files
-const { schema } = require("./src/Schema.js");
+const { schema } = require("./Schema.js");
 
 const app = express();
 
